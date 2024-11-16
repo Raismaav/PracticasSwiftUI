@@ -8,11 +8,39 @@
 import SwiftUI
 
 struct ButtonExample: View {
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button("Hola") {
+            print("Holis")
+        }
+        Button(action: {print("Holiwi")}, label: {
+            Text("Hola")
+                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 50)
+                .foregroundColor(.white)
+                .background(.blue)
+                .cornerRadius(10)
+        })
+    }
+}
+
+struct Counter:View {
+    @State var subscribersNumber = 0
+    var body: some View {
+        Button(action: {
+            subscribersNumber += 1
+        }, label: {
+            Text("Suscriptores: \(subscribersNumber)")
+                .bold()
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .padding()
+                .frame(height: 50)
+                .foregroundColor(.white)
+                .background(.red)
+                .cornerRadius(10)
+        })
     }
 }
 
 #Preview {
-    ButtonExample()
+    Counter()
 }

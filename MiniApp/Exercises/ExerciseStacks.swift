@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ExerciseStacks.swift
 //  MiniApp
 //
 //  Created by Rafael Magana  on 08/11/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExcersiStacks: View {
+struct ExerciseStacks: View {
     var body: some View {
         VStack {
             HStack {
@@ -44,5 +44,5 @@ struct ExcersiStacks: View {
 }
 
 #Preview {
-    ExcersiStacks()
+    ExerciseStacks()
 }
